@@ -1,0 +1,38 @@
+﻿@model Clase4_Intro_a_POO.Models.DirectorTecnicoAltaVM
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Alta DT</title>
+</head>
+<body>
+    <div>
+        <form action="/DirectorTecnico/Alta" method="post">
+            <div>
+                Nombre de Usuario: <input type="text" name="NombreDeUsuario" />
+            </div>
+            <div>
+                Arquero:
+                <select name="IdArquero">
+                    @foreach (var jug in @Model.Arqueros)
+                    {
+                        <option value="@jug.Id">@jug.Apellido, @jug.Nombre</option>
+                    }
+                </select>
+            </div>
+            <div>
+                Delantero1:
+            </div>
+            <div>
+                Delantero2:
+            </div>
+            <input type="submit" value="Crear" />
+        </form>
+    </div>
+</body>
+</html>

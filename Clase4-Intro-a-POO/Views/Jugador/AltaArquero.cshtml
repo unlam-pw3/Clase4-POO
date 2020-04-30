@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Alta Arquero</title>
+</head>
+<body>
+    <form action="/Jugador/AltaArquero" method="post">
+        <div>
+            <div>
+                Nombre: <input type="text" name="Nombre" />
+            </div>
+            <div>
+                Apellido: <input type="text" name="Apellido" />
+            </div>
+            <div>
+                Expulsado: Si <input type="radio" name="Expulsado" value="True" /> No <input type="radio" name="Expulsado" value="False" checked="checked"  />
+            </div>
+            <div>
+                Penales Atajados: <input type="text" name="PenalesAtajados" />
+            </div>
+            <input type="submit" name="Crear Arquero" />
+        </div>
+    </form>
+</body>
+</html>
