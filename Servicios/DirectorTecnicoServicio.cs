@@ -28,6 +28,13 @@ namespace Servicios
             Jugador arquero = JugadorServicio.ObtenerJugador(idArquero);
             dt.Arquero = arquero;
             dt.Jugadores.Add(arquero);
+            Jugador delantero1 = JugadorServicio.ObtenerJugador(idDelantero1);
+            dt.Delantero1 = delantero1;
+            dt.Jugadores.Add(delantero1);
+
+            Jugador delantero2 = JugadorServicio.ObtenerJugador(idDelantero2);
+            dt.Delantero1 = delantero2;
+            dt.Jugadores.Add(delantero2);
 
             Lista.Add(dt);
         }

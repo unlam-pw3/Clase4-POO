@@ -15,9 +15,30 @@ namespace Clase4_Intro_a_POO.Controllers
         private DirectorTecnicoAltaVM ObtenerDirectorTecnicoAltaVM()
         {
             List<Jugador> arqueros = JugadorServicio.ObtenerArqueros();
+            List<Jugador> delanteros = JugadorServicio.ObtenerDelanteros();
             DirectorTecnicoAltaVM model = new DirectorTecnicoAltaVM();
 
             model.Arqueros = arqueros;
+            model.Delanteros = delanteros;
+
+            return model;
+        }
+
+        private DirectorTecnicoAltaVM ObtenerDirectoresTecnicos()
+        {            
+            List<DirectorTecnico> dts = DirectorTecnicoServicio.ObtenerTodos();
+            DirectorTecnicoAltaVM model = new DirectorTecnicoAltaVM();
+
+            model.DTs = dts;
+
+            return model;
+        }
+        private DirectorTecnicoAltaVM Ganador1()
+        {
+            DirectorTecnico dtGanador = DirectorTecnicoServicio.ObtenerGanador();
+            DirectorTecnicoAltaVM model = new DirectorTecnicoAltaVM();
+
+            model.ganador = dtGanador;
 
             return model;
         }
@@ -42,6 +63,24 @@ namespace Clase4_Intro_a_POO.Controllers
             var model = ObtenerDirectorTecnicoAltaVM();
             return View(model);
         }
+
+
+        // GET: DirectoresTecnicos
+        [HttpGet]
+        public ActionResult Todos()
+        {
+            var model = ObtenerDirectoresTecnicos();
+            return View(model);
+        }
+
+        // GET: Ganadores
+        [HttpGet]
+        public ActionResult Ganador()
+        {
+            var model = Ganador1();
+            return View(model);
+        }
+
 
     }
 }

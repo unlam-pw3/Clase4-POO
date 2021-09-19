@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Alta Delantero</title>
+</head>
+<body>
+    <form action="/Jugador/AltaDelantero" method="post">
+        <div>
+            <div>
+                Nombre: <input type="text" name="Nombre" />
+            </div>
+            <div>
+                Apellido: <input type="text" name="Apellido" />
+            </div>
+            <div>
+                Expulsado: Si <input type="radio" name="Expulsado" value="True" /> No <input type="radio" name="Expulsado" value="False" checked="checked"/>
+            </div>
+            <div>
+                Penales Convertidos: <input type="text" name="PenalesConvertidos" />
+            </div>
+            <input type="submit" name="Crear Delantero" />
+        </div>
+    </form>
+</body>
+</html>

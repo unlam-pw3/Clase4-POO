@@ -27,9 +27,21 @@
             </div>
             <div>
                 Delantero1:
+                <select name="IdDelantero1">
+                    @foreach (var jug in @Model.Delanteros)
+                    {
+                        <option value="@jug.Id">@jug.Apellido, @jug.Nombre</option>
+                    }
+                </select>
             </div>
             <div>
                 Delantero2:
+                <select name="IdDelantero2">
+                    @foreach (var jug in @Model.Delanteros)
+                    {
+                        <option value="@jug.Id">@jug.Apellido, @jug.Nombre</option>
+                    }
+                </select>
             </div>
             <input type="submit" value="Crear" />
         </form>

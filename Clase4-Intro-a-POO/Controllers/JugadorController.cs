@@ -24,5 +24,22 @@ namespace Clase4_Intro_a_POO.Controllers
             //Request["PenalesAtajados"];
             return View();
         }
+
+
+        // GET: Jugador
+        [HttpGet]
+        public ActionResult AltaDelantero()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AltaDelantero(Delantero delantero)
+        {
+            JugadorServicio.Crear(delantero);            
+            return View();
+        }
+
+
     }
 }

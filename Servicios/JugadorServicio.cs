@@ -35,6 +35,23 @@ namespace Servicios
             return arqueros.OrderBy(o=> o.Apellido).ThenBy(o=> o.Nombre).ToList();
         }
 
+
+        public static List<Jugador> ObtenerDelanteros()
+        {
+            List<Jugador> delanteros = new List<Jugador>();
+            foreach (var jug in Lista)
+            {
+                if (jug is Delantero)
+                {
+                    delanteros.Add(jug);
+                }
+            }
+
+            return delanteros.OrderBy(o => o.Apellido).ThenBy(o => o.Nombre).ToList();
+        }
+
+
+
         public static Jugador ObtenerJugador(int id)
         {
             return Lista.Find(o => o.Id == id);
