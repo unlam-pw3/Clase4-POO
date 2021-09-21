@@ -10,5 +10,14 @@ namespace Clase4_Intro_a_POO.Models
     {
         public List<Jugador> Arqueros { get; set; }
         public List<Jugador> Delanteros { get; set; }
+        public List<DirectorTecnico> DTs { get; set; }
+        public DirectorTecnico ganador { get; set; }
+
     }
+
+
+    //public class DirectoresTecnicos
+    //{
+
+    //}
 }
